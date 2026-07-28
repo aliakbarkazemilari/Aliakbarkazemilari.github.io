@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Vazirmatn','Inter',sans-serif;
+  margin:0;
+  background:#F8FAFC;
+  color:#334155;
+}
+
+
+.container {
+  width:90%;
+  max-width:1150px;
+  margin:auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+  background:#ffffff;
+  padding:18px 0;
+  border-bottom:1px solid #E2E8F0;
+
+}
+
+
+.nav-container {
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+}
+
+
+.logo {
+
+  font-size:28px;
+  font-weight:700;
+  color:#12344D;
+
+}
+
+
+/* Menu buttons */
+
+nav ul {
+
+  list-style:none;
+  display:flex;
+  gap:10px;
+  padding:0;
+  margin:0;
+  align-items:center;
+
+}
+
+
+nav ul li a {
+
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+  background:#12344D;
+
+  color:white;
+
+  padding:10px 15px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  transition:.3s;
+
+}
+
+
+nav ul li a:hover {
+
+  background:#2563EB;
+
+  transform:translateY(-3px);
+
+}
+
+
+/* Language */
+
+.language-switch {
+
+  background:#2563EB !important;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+  padding:90px 0;
+
+  text-align:center;
+
+  background:linear-gradient(180deg,#ffffff,#EEF4F8);
+
+}
+
+
+
+.profile-box {
+
+  display:inline-block;
+
+  padding:0;
+
+  border-radius:18px;
+
+  background:white;
+
+  box-shadow:0 15px 40px rgba(15,23,42,.15);
+
+}
+
+
+
+.profile-box img {
+
+  width:300px;
+
+  height:370px;
+
+  object-fit:cover;
+
+  border-radius:18px;
+
+  display:block;
+
+}
+
+
+
+.hero h2 {
+
+  margin-top:30px;
+
+  font-size:42px;
+
+  color:#12344D;
+
+}
+
+
+
+.hero p {
+
+  max-width:850px;
+
+  margin:15px auto;
+
+  font-size:18px;
+
+  line-height:2;
+
+}
+
+
+
+
+
+/* ================= BUTTONS ================= */
+
+.links {
+
+  margin-top:35px;
+
+}
+
+
+.links a {
+
+  display:inline-block;
+
+  background:#12344D;
+
+  color:white;
+
+  padding:13px 28px;
+
+  margin:8px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  transition:.3s;
+
+}
+
+
+.links a:hover {
+
+  background:#2563EB;
+
+}
+
+
+
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+  padding:70px 0;
+
+}
+
+
+.section h2 {
+
+  color:#12344D;
+
+  font-size:34px;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.section p,
+.section li {
+
+  font-size:17px;
+
+  line-height:2;
+
+}
+
+
+
+.gray {
+
+  background:#F1F5F9;
+
+}
+
+
+
+
+
+/* ================= CARDS ================= */
+
+.education-item,
+.experience-item,
+.publication-item {
+
+  background:white;
+
+  padding:30px;
+
+  margin-bottom:25px;
+
+  border-radius:16px;
+
+  box-shadow:0 8px 25px rgba(15,23,42,.07);
+
+  border-left:5px solid #12344D;
+
+  transition:.3s;
+
+}
+
+
+
+.education-item:hover,
+.experience-item:hover,
+.publication-item:hover {
+
+  transform:translateY(-5px);
+
+}
+
+
+
+.education-item h3,
+.experience-item h3,
+.publication-item h3 {
+
+  color:#12344D;
+
+}
+
+
+
+
+
+/* ================= PUBLICATION BUTTON ================= */
+
+.btn {
+
+  display:inline-block;
+
+  background:#12344D;
+
+  color:white;
+
+  padding:13px 28px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+}
+
+
+.btn:hover {
+
+  background:#2563EB;
+
+}
+
+
+
+.btn-outline {
+
+  display:inline-block;
+
+  border:2px solid #12344D;
+
+  color:#12344D;
+
+  padding:10px 22px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+}
+
+
+
+
+
+/* ================= SOCIAL PROFILES ================= */
+
+.social-icons {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:15px;
+
+}
+
+
+
+.social-icons a {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  background:white;
+
+  color:#12344D;
+
+  padding:12px 22px;
+
+  border-radius:12px;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  border:1px solid #E2E8F0;
+
+  transition:.3s;
+
+}
+
+
+
+.social-icons span {
+
+  width:38px;
+
+  height:38px;
+
+  background:#12344D;
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  font-weight:bold;
+
+}
+
+
+
+.social-icons a:hover {
+
+  background:#12344D;
+
+  color:white;
+
+}
+
+
+
+
+
+/* ================= CONTACT ================= */
+
+#contact p {
+
+  font-size:18px;
+
+}
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+  background:#12344D;
+
+  color:white;
+
+  text-align:center;
+
+  padding:30px;
+
+}
+
+
+
+
+
+/* ================= RTL Persian ================= */
+
+html[lang="fa"] {
+
+ direction:rtl;
+
+}
+
+
+html[lang="fa"] .education-item,
+html[lang="fa"] .experience-item,
+html[lang="fa"] .publication-item {
+
+ border-right:5px solid #12344D;
+
+ border-left:none;
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+
+.nav-container {
+
+ flex-direction:column;
+
+}
+
+
+
+nav ul {
+
+ flex-wrap:wrap;
+
+ justify-content:center;
+
+ margin-top:20px;
+
+}
+
+
+
+.hero h2 {
+
+ font-size:32px;
+
+}
+
+
+
+.profile-box img {
+
+ width:230px;
+
+ height:290px;
+
+}
+
+
+}
