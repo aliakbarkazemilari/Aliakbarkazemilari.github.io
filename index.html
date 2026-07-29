@@ -1,79 +1,136 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>عنوان سایت شما | توضیح کوتاه جذاب</title>
-  <meta name="description" content="اینجا توضیح کامل سایتت برای سئو بنویس. حدود 150 تا 160 کاراکتر باشه.">
+<title>Aliakbar Kazemilari | Ph.D. Student in Educational Management</title>
 
-  <!-- SEO -->
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yoursite.com/">
+<meta name="description" content="Aliakbar Kazemilari is a Ph.D. student in Educational Management, researcher, and teacher.">
 
-  <!-- Open Graph (برای اشتراک گذاری) -->
-  <meta property="og:title" content="عنوان سایت شما">
-  <meta property="og:description" content="توضیح کوتاه سایت">
-  <meta property="og:image" content="https://yoursite.com/image.jpg">
-  <meta property="og:url" content="https://yoursite.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Schema (خیلی مهم برای سئو) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "نام سایت شما",
-    "url": "https://yoursite.com/",
-    "description": "توضیح سایت شما",
-    "inLanguage": "fa"
-  }
-  </script>
-
-  <!-- استایل -->
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #111;
-      color: #fff;
-    }
-    header {
-      padding: 20px;
-      text-align: center;
-      background: #000;
-    }
-    main {
-      padding: 20px;
-    }
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>به سایت من خوش آمدید</h1>
+<div class="container nav-container">
+
+<h1 class="logo">Kazemilari</h1>
+
+<nav>
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+
+<li><a href="fa.html">🌐 فارسی</a></li>
+
+<!-- سه نقطه -->
+<li class="menu-dots">
+<span onclick="toggleMenu()">⋮</span>
+
+<div id="dropdown" class="dropdown-menu">
+<a href="downloads.html">📥 Downloads</a>
+</div>
+
+</li>
+
+</ul>
+</nav>
+
+</div>
 </header>
 
-<main>
-  <p>این یه متن نمونه برای صفحه اصلیه. اینجا محتوای واقعی خودتو بذار.</p>
-</main>
+<section id="home" class="hero">
 
-<footer style="text-align:center; padding:20px;">
-  <p>© 2026 - همه حقوق محفوظ است</p>
+<div class="container hero-content">
+
+<div class="profile-box">
+<img src="profile.jpg" alt="Aliakbar Kazemilari">
+</div>
+
+<!-- اسم زیر عکس -->
+<h2 class="name">Aliakbar Kazemilari</h2>
+
+<p>
+Ph.D. Student in Educational Management | Teacher | Researcher
+</p>
+
+<div class="links">
+<a href="cv.pdf" target="_blank">Download CV</a>
+<a href="mailto:Aliakbarkazemilari@gmail.com">Email</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+<div class="container">
+<h2>About Me</h2>
+<p>
+Aliakbar Kazemilari is a Ph.D. student in Educational Management focused on leadership and innovation.
+</p>
+</div>
+</section>
+
+<section id="education" class="section gray">
+<div class="container">
+
+<h2>Education</h2>
+
+<div class="education-item">
+<h3>Ph.D. in Educational Management</h3>
+<p>Islamic Azad University, Bandar Abbas</p>
+</div>
+
+<div class="education-item">
+<h3>M.Sc. in Educational Management</h3>
+<p>Islamic Azad University, Shiraz</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+
+<h2>Skills</h2>
+
+<ul>
+<li>Educational Leadership</li>
+<li>Research</li>
+<li>Teaching</li>
+</ul>
+
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container">
+
+<h2>Contact</h2>
+
+<p>Email: <a href="mailto:Aliakbarkazemilari@gmail.com">Aliakbarkazemilari@gmail.com</a></p>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Aliakbar Kazemilari</p>
 </footer>
+
+<script>
+function toggleMenu(){
+  var menu = document.getElementById("dropdown");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
