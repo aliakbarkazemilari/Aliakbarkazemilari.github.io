@@ -532,3 +532,47 @@ nav ul {
 
 
 }
+/* سه نقطه */
+.menu-dots {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-dots span {
+  font-size:22px;
+  padding:10px;
+  background:#12344D;
+  color:white;
+  border-radius:8px;
+}
+
+/* منوی بازشونده */
+.dropdown-menu {
+  display:none;
+  position:absolute;
+  right:0;
+  top:45px;
+  background:white;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  border-radius:10px;
+  overflow:hidden;
+  min-width:150px;
+}
+
+.dropdown-menu a {
+  display:block;
+  padding:12px;
+  color:#12344D;
+  text-decoration:none;
+}
+
+.dropdown-menu a:hover {
+  background:#EEF4F8;
+}
+
+/* اسم زیر عکس */
+.name {
+  margin-top:15px;
+  font-size:28px;
+  color:#12344D;
+}
