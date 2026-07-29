@@ -1,190 +1,252 @@
-/* ===== RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== VARIABLES ===== */
-:root {
-  --navy: #0a192f;
-  --light: #f8f9fa;
-  --gold: #c9a227;
-  --text: #333;
-}
-
-/* ===== BODY ===== */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--light);
-  color: var(--text);
-  line-height: 1.7;
+  font-family: 'Vazirmatn','Inter',sans-serif;
+  margin:0;
+  background:#F8FAFC;
+  color:#334155;
 }
 
-/* ===== CONTAINER ===== */
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+  width:90%;
+  max-width:1150px;
+  margin:auto;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
+
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: white;
-  padding: 15px 0;
-  transition: 0.3s;
-  z-index: 1000;
+  background:#ffffff;
+  padding:18px 0;
+  border-bottom:1px solid #E2E8F0;
 }
 
-header.scrolled {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-/* ===== NAV ===== */
-.nav-list {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
-.nav-list a {
-  text-decoration: none;
-  color: var(--navy);
-  font-weight: 500;
-  position: relative;
-}
-
-/* hover effect حرفه‌ای */
-.nav-list a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--gold);
-  transition: 0.3s;
-}
-
-.nav-list a:hover::after {
-  width: 100%;
-}
-
-/* active */
-.nav-list a.active {
-  color: var(--gold);
-}
-
-/* ===== MENU BUTTON ===== */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 120px 0;
-}
-
-/* عنوان‌ها */
-h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: var(--navy);
-}
-
-/* متن */
-p {
-  max-width: 700px;
-  opacity: 0.85;
-}
-
-/* ===== CARDS (اگر داری استفاده میشه) ===== */
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    padding: 20px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  }
-
-  .nav-list.open {
-    display: flex;
-  }
-}
-
-/* ===== ANIMATION ===== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.7s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== LOGO حرفه‌ای ===== */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.brand img {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #c9a227;
-}
-
-.brand span {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* حذف هر عکس بزرگ داخل هیرو */
-.hero img {
-  display: none;
+.nav-container {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+  font-size:28px;
+  font-weight:700;
+  color:#12344D;
+}
+
+/* Menu buttons */
+
+nav ul {
+  list-style:none;
+  display:flex;
+  gap:10px;
+  padding:0;
+  margin:0;
+  align-items:center;
+}
+
+nav ul li a {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:#12344D;
+  color:white;
+  padding:10px 15px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:.3s;
+}
+
+nav ul li a:hover {
+  background:#2563EB;
+  transform:translateY(-3px);
+}
+
+/* ================= سه نقطه ================= */
+
+.menu-dots {
+  position:relative;
+}
+
+.menu-dots span {
+  font-size:22px;
+  cursor:pointer;
+  padding:8px 12px;
+  border-radius:8px;
+  background:#12344D;
+  color:white;
+}
+
+.menu-dots span:hover {
+  background:#2563EB;
+}
+
+/* dropdown */
+
+.dropdown-menu {
+  display:none;
+  position:absolute;
+  top:45px;
+  right:0;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  min-width:160px;
+  overflow:hidden;
+  z-index:999;
+}
+
+.dropdown-menu a {
+  display:block;
+  padding:12px;
+  color:#12344D;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.dropdown-menu a:hover {
+  background:#F1F5F9;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  padding:90px 0;
+  text-align:center;
+  background:linear-gradient(180deg,#ffffff,#EEF4F8);
+}
+
+.profile-box {
+  display:inline-block;
+  border-radius:18px;
+  background:white;
+  box-shadow:0 15px 40px rgba(15,23,42,.15);
+}
+
+.profile-box img {
+  width:300px;
+  height:370px;
+  object-fit:cover;
+  border-radius:18px;
+  display:block;
+}
+
+/* اسم زیر عکس */
+
+.name {
+  margin-top:30px;
+  font-size:40px;
+  color:#12344D;
+  font-weight:700;
+}
+
+/* توضیح */
+
+.hero p {
+  max-width:850px;
+  margin:15px auto;
+  font-size:18px;
+  line-height:2;
+}
+
+/* ================= BUTTONS ================= */
+
+.links {
+  margin-top:35px;
+}
+
+.links a {
+  display:inline-block;
+  background:#12344D;
+  color:white;
+  padding:13px 28px;
+  margin:8px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.links a:hover {
+  background:#2563EB;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding:70px 0;
+}
+
+.section h2 {
+  color:#12344D;
+  font-size:34px;
+  margin-bottom:30px;
+}
+
+.section p, .section li {
+  font-size:17px;
+  line-height:2;
+}
+
+.gray {
+  background:#F1F5F9;
+}
+
+/* ================= CARDS ================= */
+
+.education-item {
+  background:white;
+  padding:30px;
+  margin-bottom:25px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(15,23,42,.07);
+  border-left:5px solid #12344D;
+  transition:.3s;
+}
+
+.education-item:hover {
+  transform:translateY(-5px);
+}
+
+/* ================= CONTACT ================= */
+
+#contact p {
+  font-size:18px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background:#12344D;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .nav-container {
+    flex-direction:column;
+  }
+
+  nav ul {
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+  }
+
+  .profile-box img {
+    width:230px;
+    height:290px;
+  }
+
+  .name {
+    font-size:28px;
+  }
+
 }
