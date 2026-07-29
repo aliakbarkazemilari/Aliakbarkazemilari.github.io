@@ -1,32 +1,73 @@
-let lang = "fa";
+/* Mobile menu */
+const menuToggle = document.getElementById('menuToggle');
+const navList = document.getElementById('navList');
 
-function toggleLang() {
-  lang = lang === "fa" ? "en" : "fa";
+if (menuToggle && navList) {
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('open');
+  });
 
-  document.querySelectorAll("[data-fa]").forEach(el => {
-    el.innerText = el.getAttribute("data-" + lang);
+navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navList.classList.remove('open'));
   });
 }
 
-/* Civilica Auto */
-fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://civilica.com/p/445214/print/"))
-  .then(res => res.json())
-  .then(data => {
-    let parser = new DOMParser();
-    let doc = parser.parseFromString(data.contents, "text/html");
+/* Header scroll effect */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
 
-    let links = doc.querySelectorAll("a");
-    let output = "<ul>";
+/* Active nav link on scroll */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
 
-    links.forEach(link => {
-      if (link.innerText.length > 20) {
-        output += `<li><a href="${link.href}" target="_blank">${link.innerText}</a></li>`;
+function updateActiveNav() {
+  const scrollPos = window.scrollY + 100;
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+    if (scrollPos >= top && scrollPos < top + height) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + id) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+
+/* Publication tabs */
+document.querySelectorAll('.pub-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.pub-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.pub-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel = document.getElementById(tab.dataset.tab);
+    if (panel) panel.classList.add('active');
+  });
+});
+
+/* Fade-up animation on scroll */
+const fadeElements = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
+  },
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
 
-    output += "</ul>";
-    document.getElementById("pub-list").innerHTML = output;
-  })
-  .catch(() => {
-    document.getElementById("pub-list").innerText = "خطا در بارگذاری مقالات";
-  });
+fadeElements.forEach(el => observer.observe(el));
