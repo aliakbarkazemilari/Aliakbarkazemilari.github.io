@@ -1,147 +1,208 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aliakbar Kazemilari</title>
 
-<title>Aliakbar Kazemilari | Ph.D. Student in Educational Management</title>
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0f172a;
+  color: #fff;
+  line-height: 1.8;
+}
 
-<meta name="description" content="Aliakbar Kazemilari is a Ph.D. student in Educational Management, researcher, and teacher.">
+header {
+  background: #020617;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
 
-<link rel="stylesheet" href="style.css">
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: #020617;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
+}
+
+nav a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #1e293b;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: linear-gradient(45deg,#1e3a8a,#0f172a);
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-right: 20px;
+}
+
+.tags span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
-<div class="container nav-container">
-
-<h1 class="logo">Kazemilari</h1>
-
-<nav>
-<ul>
-
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
-
-<li><a href="fa.html" class="language-switch">🌐 فارسی</a></li>
-
-<!-- سه نقطه -->
-<li class="menu-dots">
-<span onclick="toggleMenu()">⋮</span>
-
-<div id="dropdown" class="dropdown-menu">
-<a href="downloads.html">📥 Downloads</a>
-</div>
-
-</li>
-
-</ul>
-</nav>
-
-</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="#about">درباره</a>
+    <a href="#education">تحصیلات</a>
+    <a href="#experience">سوابق</a>
+    <a href="#articles">مقالات</a>
+    <a href="#books">کتاب‌ها</a>
+    <a href="#keywords">کلیدواژه‌ها</a>
+    <a href="#contact">تماس</a>
+    <a href="downloads.html">دانلود جزوه</a>
+  </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section id="home" class="hero">
+<section class="hero">
+  <h1>Aliakbar Kazemilari</h1>
+  <p>معلم | استاد دانشگاه | دانشجوی دکتری مدیریت آموزشی</p>
+</section>
 
-<div class="container hero-content">
-
-<div class="profile-box">
-<img src="profile.jpg" alt="Aliakbar Kazemilari">
-</div>
-
-<h2 class="name">Aliakbar Kazemilari</h2>
-
+<section id="about">
+<h2>درباره من</h2>
 <p>
-Ph.D. Student in Educational Management | Teacher | Researcher
+علی‌اکبر کاظمی‌لاری، معلم دوره ابتدایی، دانشجوی دکتری مدیریت آموزشی و استاد دانشگاه آزاد اسلامی است.
+فعالیت‌های وی در حوزه آموزش، مدیریت آموزشی، پژوهش و توسعه نظام‌های آموزشی متمرکز است.
 </p>
 
-<div class="links">
-<a href="cv.pdf" target="_blank">Download CV</a>
-<a href="mailto:Aliakbarkazemilari@gmail.com">Email</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-<div class="container">
-
-<h2>About Me</h2>
-
 <p>
-Aliakbar Kazemilari is a Ph.D. student in Educational Management with a strong focus on educational leadership, innovation, and research development. His work centers on improving academic systems and empowering future educators.
+Ali Akbar Kazemi Lari is an elementary school teacher and PhD candidate in Educational Management,
+actively working in improving educational systems and promoting innovation.
 </p>
-
-</div>
 </section>
 
-<!-- ================= EDUCATION ================= -->
-<section id="education" class="section gray">
-<div class="container">
-
-<h2>Education</h2>
-
-<div class="education-item">
-<h3>Ph.D. in Educational Management</h3>
-<p>Islamic Azad University, Bandar Abbas</p>
-</div>
-
-<div class="education-item">
-<h3>M.Sc. in Educational Management</h3>
-<p>Islamic Azad University, Shiraz</p>
-</div>
-
-</div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section">
-<div class="container">
-
-<h2>Skills</h2>
-
+<section id="education">
+<h2>تحصیلات</h2>
 <ul>
-<li>Educational Leadership</li>
-<li>Research & Academic Writing</li>
-<li>Teaching & Training</li>
-<li>Data Analysis</li>
+<li>دکتری مدیریت آموزشی - دانشگاه آزاد بندرعباس</li>
+<li>کارشناسی ارشد مدیریت آموزشی - دانشگاه آزاد شیراز</li>
+<li>کارشناسی آموزش ابتدایی - دانشگاه فرهنگیان</li>
 </ul>
+</section>
 
+<section id="experience">
+<h2>سوابق شغلی</h2>
+<ul>
+<li>معلم ابتدایی (1397 تاکنون)</li>
+<li>استاد دانشگاه آزاد لارستان (1403 تاکنون)</li>
+<li>استاد دانشگاه آزاد گراش</li>
+</ul>
+</section>
+
+<section id="articles">
+<h2>مقالات</h2>
+<ul>
+<li>تحلیل رفتار سازمانی نظام آموزشی ایران</li>
+<li>دلبستگی شغلی و نوآوری سازمانی</li>
+<li>روش‌های تدریس مشارکتی</li>
+<li>تأثیر شبکه‌های اجتماعی بر آموزش</li>
+<li>آموزش مهارت‌های زندگی</li>
+</ul>
+</section>
+
+<section id="books">
+<h2>تالیفات</h2>
+<ul>
+<li>راهنمای فرهنگ اخلاقی</li>
+<li>راهنمای رهبری آموزش عالی</li>
+</ul>
+</section>
+
+<section id="keywords">
+<h2>کلیدواژه‌ها</h2>
+<div class="tags">
+<span>رهبری تحول‌آفرین</span>
+<span>رفتار سازمانی</span>
+<span>آموزش تطبیقی</span>
+<span>خودکارآمدی</span>
+<span>فرهنگ سازمانی</span>
+<span>سرمایه فکری</span>
 </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section">
-<div class="container">
-
-<h2>Contact</h2>
-
-<p>
-Email:
-<a href="mailto:Aliakbarkazemilari@gmail.com">
-Aliakbarkazemilari@gmail.com
-</a>
-</p>
-
-</div>
+<section>
+<h2>علایق</h2>
+<ul>
+<li>نوآوری در آموزش</li>
+<li>مدیریت دانش</li>
+<li>رهبری آموزشی</li>
+<li>فرهنگ صلح</li>
+<li>سواد دیجیتال</li>
+</ul>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<section id="contact">
+<h2>اطلاعات تماس</h2>
+<p>📧 aliakbar.kazemilari@iau.ac.ir</p>
+<p>📍 ایران - شیراز</p>
+<p>🆔 0009-0006-6839-7616</p>
+</section>
+
 <footer>
-<p>© 2026 Aliakbar Kazemilari</p>
+<p>© Aliakbar Kazemilari</p>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
-<script src="script.js"></script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>
