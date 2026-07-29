@@ -1,4 +1,6 @@
-/* Mobile menu */
+/* ============================= */
+/* NAV MENU (MOBILE TOGGLE) */
+/* ============================= */
 const menuToggle = document.getElementById('menuToggle');
 const navList = document.getElementById('navList');
 
@@ -7,34 +9,49 @@ if (menuToggle && navList) {
     navList.classList.toggle('open');
   });
 
-navList.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navList.classList.remove('open'));
+  // بستن منو بعد از کلیک
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('open');
+    });
   });
 }
 
-/* Header scroll effect */
+
+/* ============================= */
+/* HEADER SCROLL EFFECT */
+/* ============================= */
 const header = document.getElementById('header');
+
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
+  if (!header) return;
+
+  if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');
   }
 });
 
-/* Active nav link on scroll */
+
+/* ============================= */
+/* ACTIVE NAV LINK (SCROLL SPY) */
+/* ============================= */
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
+const navLinks = document.querySelectorAll('.nav-list a');
 
 function updateActiveNav() {
-  const scrollPos = window.scrollY + 100;
+  const scrollPos = window.scrollY + 120;
+
   sections.forEach(section => {
     const top = section.offsetTop;
     const height = section.offsetHeight;
     const id = section.getAttribute('id');
+
     if (scrollPos >= top && scrollPos < top + height) {
       navLinks.forEach(link => {
         link.classList.remove('active');
+
         if (link.getAttribute('href') === '#' + id) {
           link.classList.add('active');
         }
@@ -45,29 +62,42 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav);
 
-/* Publication tabs */
-document.querySelectorAll('.pub-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.pub-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.pub-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    const panel = document.getElementById(tab.dataset.tab);
-    if (panel) panel.classList.add('active');
-  });
-});
 
-/* Fade-up animation on scroll */
+/* ============================= */
+/* SCROLL ANIMATION (FADE-UP) */
+/* ============================= */
 const fadeElements = document.querySelectorAll('.fade-up');
+
 const observer = new IntersectionObserver(
-  entries => {
+  (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  {
+    threshold: 0.15
+  }
 );
 
 fadeElements.forEach(el => observer.observe(el));
+
+
+/* ============================= */
+/* SMOOTH SCROLL */
+/* ============================= */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+
+    if (!target) return;
+
+    e.preventDefault();
+
+    window.scrollTo({
+      top: target.offsetTop - 70,
+      behavior: 'smooth'
+    });
+  });
+});
