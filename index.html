@@ -11,7 +11,6 @@ body {
   font-family: sans-serif;
   background: #0f172a;
   color: #fff;
-  line-height: 1.8;
 }
 
 header {
@@ -20,7 +19,6 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
 }
 
 .menu-btn {
@@ -35,12 +33,12 @@ nav {
   position: absolute;
   right: 0;
   top: 50px;
-  width: 200px;
+  width: 220px;
 }
 
 nav a {
   color: #fff;
-  padding: 10px;
+  padding: 12px;
   text-decoration: none;
 }
 
@@ -50,12 +48,8 @@ nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 120px 20px;
   background: linear-gradient(45deg,#1e3a8a,#0f172a);
-}
-
-.hero h1 {
-  font-size: 32px;
 }
 
 section {
@@ -68,26 +62,50 @@ h2 {
   color: #38bdf8;
   border-bottom: 2px solid #38bdf8;
   display: inline-block;
-  margin-bottom: 15px;
 }
 
-ul {
-  padding-right: 20px;
+.skills div {
+  margin: 10px 0;
 }
 
-.tags span {
-  display: inline-block;
+.bar {
   background: #1e293b;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  padding: 5px;
+  background: #38bdf8;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 footer {
   text-align: center;
   padding: 20px;
   background: #020617;
-  margin-top: 40px;
 }
 </style>
 </head>
@@ -95,102 +113,83 @@ footer {
 <body>
 
 <header>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-  <nav id="menu">
-    <a href="#about">درباره</a>
-    <a href="#education">تحصیلات</a>
-    <a href="#experience">سوابق</a>
-    <a href="#articles">مقالات</a>
-    <a href="#books">کتاب‌ها</a>
-    <a href="#keywords">کلیدواژه‌ها</a>
-    <a href="#contact">تماس</a>
-    <a href="downloads.html">دانلود جزوه</a>
-  </nav>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<nav id="menu">
+<a href="#about">درباره</a>
+<a href="#skills">مهارت‌ها</a>
+<a href="#projects">پروژه‌ها</a>
+<a href="#downloads">دانلود</a>
+<a href="#contact">تماس</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h1>Aliakbar Kazemilari</h1>
-  <p>معلم | استاد دانشگاه | دانشجوی دکتری مدیریت آموزشی</p>
+<h1>Aliakbar Kazemilari</h1>
+<p>معلم | پژوهشگر | مدیریت آموزشی</p>
 </section>
 
 <section id="about">
 <h2>درباره من</h2>
 <p>
-علی‌اکبر کاظمی‌لاری، معلم دوره ابتدایی، دانشجوی دکتری مدیریت آموزشی و استاد دانشگاه آزاد اسلامی است.
-فعالیت‌های وی در حوزه آموزش، مدیریت آموزشی، پژوهش و توسعه نظام‌های آموزشی متمرکز است.
-</p>
-
-<p>
-Ali Akbar Kazemi Lari is an elementary school teacher and PhD candidate in Educational Management,
-actively working in improving educational systems and promoting innovation.
+فعال در حوزه آموزش، پژوهش و توسعه نظام‌های آموزشی با تمرکز بر نوآوری، رهبری آموزشی و توانمندسازی.
 </p>
 </section>
 
-<section id="education">
-<h2>تحصیلات</h2>
-<ul>
-<li>دکتری مدیریت آموزشی - دانشگاه آزاد بندرعباس</li>
-<li>کارشناسی ارشد مدیریت آموزشی - دانشگاه آزاد شیراز</li>
-<li>کارشناسی آموزش ابتدایی - دانشگاه فرهنگیان</li>
-</ul>
-</section>
+<section id="skills">
+<h2>مهارت‌ها</h2>
 
-<section id="experience">
-<h2>سوابق شغلی</h2>
-<ul>
-<li>معلم ابتدایی (1397 تاکنون)</li>
-<li>استاد دانشگاه آزاد لارستان (1403 تاکنون)</li>
-<li>استاد دانشگاه آزاد گراش</li>
-</ul>
-</section>
-
-<section id="articles">
-<h2>مقالات</h2>
-<ul>
-<li>تحلیل رفتار سازمانی نظام آموزشی ایران</li>
-<li>دلبستگی شغلی و نوآوری سازمانی</li>
-<li>روش‌های تدریس مشارکتی</li>
-<li>تأثیر شبکه‌های اجتماعی بر آموزش</li>
-<li>آموزش مهارت‌های زندگی</li>
-</ul>
-</section>
-
-<section id="books">
-<h2>تالیفات</h2>
-<ul>
-<li>راهنمای فرهنگ اخلاقی</li>
-<li>راهنمای رهبری آموزش عالی</li>
-</ul>
-</section>
-
-<section id="keywords">
-<h2>کلیدواژه‌ها</h2>
-<div class="tags">
-<span>رهبری تحول‌آفرین</span>
-<span>رفتار سازمانی</span>
-<span>آموزش تطبیقی</span>
-<span>خودکارآمدی</span>
-<span>فرهنگ سازمانی</span>
-<span>سرمایه فکری</span>
+<div class="skills">
+<div>مدیریت آموزشی<div class="bar"><span style="width:90%">90%</span></div></div>
+<div>پژوهش علمی<div class="bar"><span style="width:85%">85%</span></div></div>
+<div>تدریس مشارکتی<div class="bar"><span style="width:88%">88%</span></div></div>
+<div>سواد دیجیتال<div class="bar"><span style="width:80%">80%</span></div></div>
 </div>
+
 </section>
 
-<section>
-<h2>علایق</h2>
-<ul>
-<li>نوآوری در آموزش</li>
-<li>مدیریت دانش</li>
-<li>رهبری آموزشی</li>
-<li>فرهنگ صلح</li>
-<li>سواد دیجیتال</li>
-</ul>
+<section id="projects">
+<h2>پروژه‌ها</h2>
+
+<div class="card">
+<h3>تحلیل نظام آموزشی</h3>
+<p>بررسی رفتار سازمانی در مدارس</p>
+</div>
+
+<div class="card">
+<h3>نوآوری در تدریس</h3>
+<p>استفاده از روش‌های مشارکتی</p>
+</div>
+
+</section>
+
+<section id="downloads">
+<h2>دانلود جزوه</h2>
+
+<div class="card">
+<h3>جزوه مدیریت آموزشی</h3>
+<a href="#">دانلود</a>
+</div>
+
+<div class="card">
+<h3>جزوه روش تدریس</h3>
+<a href="#">دانلود</a>
+</div>
+
 </section>
 
 <section id="contact">
-<h2>اطلاعات تماس</h2>
+<h2>تماس با من</h2>
+
 <p>📧 aliakbar.kazemilari@iau.ac.ir</p>
-<p>📍 ایران - شیراز</p>
-<p>🆔 0009-0006-6839-7616</p>
+<p>📍 شیراز - ایران</p>
+
+<form>
+<input type="text" placeholder="نام">
+<input type="email" placeholder="ایمیل">
+<textarea placeholder="پیام"></textarea>
+<button>ارسال</button>
+</form>
+
 </section>
 
 <footer>
@@ -198,9 +197,9 @@ actively working in improving educational systems and promoting innovation.
 </footer>
 
 <script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+function toggleMenu(){
+let menu=document.getElementById("menu");
+menu.style.display = menu.style.display==="flex" ? "none":"flex";
 }
 </script>
 
