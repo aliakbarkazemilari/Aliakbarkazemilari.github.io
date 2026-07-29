@@ -1,79 +1,86 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>علی‌اکبر کاظمی‌لاری | وبسایت رسمی</title>
+  <title>علی‌اکبر کاظمی‌لاری | صفحه اصلی</title>
+  <meta name="description" content="وب‌سایت رسمی علی‌اکبر کاظمی‌لاری شامل رزومه، مقالات و دانلودها">
 
   <!-- SEO -->
-  <meta name="description" content="وبسایت رسمی علی‌اکبر کاظمی‌لاری، دانشجوی دکتری مدیریت آموزشی، پژوهشگر و معلم.">
-  <meta name="keywords" content="علی اکبر کاظمی لاری, مدیریت آموزشی, پژوهشگر, معلم, رزومه">
-  <meta name="author" content="Aliakbar Kazemilari">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aliakbarkazemilari.ir/fa.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Aliakbar Kazemilari">
-  <meta property="og:description" content="وبسایت رسمی">
+  <meta property="og:title" content="علی‌اکبر کاظمی‌لاری">
+  <meta property="og:description" content="وب‌سایت رسمی و شخصی">
   <meta property="og:image" content="https://aliakbarkazemilari.ir/logo.png">
   <meta property="og:url" content="https://aliakbarkazemilari.ir/fa.html">
   <meta property="og:type" content="website">
 
-  <!-- Language SEO -->
-  <link rel="alternate" href="https://aliakbarkazemilari.ir/" hreflang="en">
-  <link rel="alternate" href="https://aliakbarkazemilari.ir/fa.html" hreflang="fa">
-
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
 
-  <!-- Font -->
+  <!-- فونت -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aliakbar Kazemilari",
+    "url": "https://aliakbarkazemilari.ir",
+    "image": "https://aliakbarkazemilari.ir/logo.png",
+    "sameAs": []
+  }
+  </script>
+
 </head>
 
 <body>
 
-  <!-- لوگو گوشه‌ای -->
-  <img src="logo.png" class="logo">
-
   <!-- هدر -->
-  <header>
-    <h1>علی‌اکبر کاظمی‌لاری</h1>
-    <p>دانشجوی دکتری مدیریت آموزشی</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="fa.html" class="brand">
+        <img src="logo.png" alt="لوگو" style="width:40px; height:40px; border-radius:50%;">
+        <span>کاظمی‌لاری</span>
+      </a>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="downloads.html">دانلودها</a></li>
+          <li><a href="index.html" class="lang-btn">🌐 English</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- منو -->
-  <nav>
-    <a href="index.html">English</a>
-    <a href="fa.html">فارسی</a>
-    <a href="downloads.html">دانلودها</a>
-  </nav>
-
-  <!-- محتوا -->
-  <main>
-
-    <section>
-      <h2>درباره من</h2>
-      <p>
-        من دانشجوی دکتری مدیریت آموزشی، معلم و پژوهشگر هستم.
-        در این وبسایت می‌توانید رزومه، مقالات و فایل‌های قابل دانلود من را مشاهده کنید.
-      </p>
-    </section>
-
-    <section>
-      <h2>دانلودها</h2>
-      <p>
-        <a href="downloads.html">مشاهده فایل‌های قابل دانلود</a>
-      </p>
-    </section>
-
+  <!-- محتوای اصلی -->
+  <main style="padding-top:80px; text-align:center;">
+    <h1>علی‌اکبر کاظمی‌لاری</h1>
+    <p>به وب‌سایت رسمی من خوش آمدید.</p>
   </main>
 
   <!-- فوتر -->
-  <footer>
-    <p>© 2026 علی‌اکبر کاظمی‌لاری</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© ۱۴۰۵ علی‌اکبر کاظمی‌لاری</p>
+    </div>
   </footer>
 
 </body>
