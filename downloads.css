@@ -1,0 +1,309 @@
+/* ================================
+   Kazemilari Downloads Page Style
+   ================================ */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: 'Vazirmatn', sans-serif;
+    background:#F8FAFC;
+    color:#334155;
+
+}
+
+
+
+
+
+/* Header Compatibility */
+
+
+.logo {
+
+    color:#12344D;
+
+}
+
+
+
+
+
+/* Download Hero */
+
+
+.download-hero {
+
+    padding:80px 0;
+    text-align:center;
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #eef4f8
+    );
+
+}
+
+
+
+.download-hero h1 {
+
+    color:#12344D;
+    font-size:40px;
+    margin-bottom:20px;
+
+}
+
+
+
+.download-hero p {
+
+    font-size:18px;
+    line-height:2;
+    max-width:800px;
+    margin:10px auto;
+
+}
+
+
+
+
+
+/* Main Categories */
+
+
+.download-category {
+
+    margin:50px 0;
+
+}
+
+
+
+.download-category h2 {
+
+    color:#12344D;
+    font-size:30px;
+    padding-bottom:12px;
+    border-bottom:2px solid #12344D;
+    margin-bottom:30px;
+
+}
+
+
+
+.download-category > p {
+
+    line-height:2;
+    font-size:17px;
+
+}
+
+
+
+
+
+
+/* Download Cards */
+
+
+.download-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+
+
+.download-card {
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    border:1px solid #e2e8f0;
+
+
+}
+
+
+
+.download-card:hover {
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 15px 35px rgba(18,52,77,.15);
+
+}
+
+
+
+
+
+.download-card h3 {
+
+    color:#12344D;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.download-card p {
+
+    line-height:1.9;
+
+    min-height:60px;
+
+}
+
+
+
+
+
+
+
+/* Download Button */
+
+
+.download-btn {
+
+
+    display:inline-block;
+
+    background:#12344D;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    margin-top:15px;
+
+    transition:.3s;
+
+
+}
+
+
+
+.download-btn:hover {
+
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+
+
+
+
+
+/* University Section */
+
+
+.download-category:last-child {
+
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+
+
+
+/* Footer */
+
+
+footer {
+
+    margin-top:60px;
+
+}
+
+
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:768px){
+
+
+
+.download-hero {
+
+    padding:50px 20px;
+
+}
+
+
+
+.download-hero h1 {
+
+    font-size:30px;
+
+}
+
+
+
+.download-category h2 {
+
+    font-size:24px;
+
+}
+
+
+
+.download-card {
+
+    padding:22px;
+
+}
+
+
+}
